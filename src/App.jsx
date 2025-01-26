@@ -49,7 +49,6 @@ const App = () => {
             }
           />
 
-          {/* Add the Registered People Route  */}
           <Route
             path="/event/:eventId/registrations"
             element={<RegisteredPeople />}  // RegisteredPeople component to show registered people for a specific event
