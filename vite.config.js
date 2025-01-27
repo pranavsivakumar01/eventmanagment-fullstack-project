@@ -7,10 +7,13 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html')
-      }
+        main: resolve(__dirname, 'index.html'),
+      },
     },
-    outDir: 'dist',  // Ensure this points to your build folder
-    copyPublicDir: true, // Ensures public files (like _redirects) are copied to dist
+    outDir: 'dist', // Vercel deploys from the "dist" folder
+    copyPublicDir: true, // Ensures public files like _redirects are copied
+  },
+  server: {
+    open: true, // Opens the app in the browser when starting the dev server
   },
 });
