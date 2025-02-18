@@ -57,7 +57,7 @@ const Home = () => {
           <p className="text-lg text-gray-300 mb-8 max-w-xl mx-auto">
             Our platform has everything you need for an exceptional college event experience.
           </p>
-          <a href="/register" className="py-4 px-10 bg-gradient-to-r from-teal-500 to-indigo-500 text-white font-semibold rounded-lg shadow-md hover:from-teal-600 hover:to-indigo-600 transition duration-500 transform hover:scale-105 hover:shadow-xl">
+          <Link to="/register" className="py-4 px-10 bg-gradient-to-r from-teal-500 to-indigo-500 text-white font-semibold rounded-lg shadow-md hover:from-teal-600 hover:to-indigo-600 transition duration-500 transform hover:scale-105 hover:shadow-xl">
             Register Now
           </a>
         </div>
