@@ -12,7 +12,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://event-backend-1uul.onrender.com', { email, password });
+      const res = await axios.post('https://event-backend-1uul.onrender.com/api/auth/login', { email, password });
       localStorage.setItem('token', res.data.token);
       const userRole = res.data.role;
 
