@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -16,12 +17,12 @@ const Home = () => {
           Organize, manage, and participate in college events effortlessly.
         </p>
         <div className="mt-8 flex justify-center gap-4">
-          <a href="/register" className="py-3 px-8 bg-gradient-to-r from-blue-500 to-teal-500 text-white font-semibold rounded-lg shadow-md hover:from-blue-600 hover:to-teal-600 transition duration-500 transform hover:scale-105 hover:shadow-xl">
+          <Link to="/register" className="py-3 px-8 bg-gradient-to-r from-blue-500 to-teal-500 text-white font-semibold rounded-lg shadow-md hover:from-blue-600 hover:to-teal-600 transition duration-500 transform hover:scale-105 hover:shadow-xl">
             Get Started
-          </a>
-          <a href="/login" className="py-3 px-8 bg-transparent border border-blue-500 text-blue-400 font-semibold rounded-lg shadow-md hover:bg-blue-600 hover:text-white transition duration-500 transform hover:scale-105 hover:shadow-xl">
+          </Link>
+          <Link to="/login" className="py-3 px-8 bg-transparent border border-blue-500 text-blue-400 font-semibold rounded-lg shadow-md hover:bg-blue-600 hover:text-white transition duration-500 transform hover:scale-105 hover:shadow-xl">
             Login
-          </a>
+          </Link>
         </div>
       </header>
 
