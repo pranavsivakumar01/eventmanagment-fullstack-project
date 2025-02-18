@@ -9,7 +9,7 @@ const EnrollmentsTable = () => {
   useEffect(() => {
     const fetchEnrollments = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/enrollments');
+        const response = await axios.get('https://event-backend-1uul.onrender.com');
         setEnrollments(response.data);
       } catch (err) {
         setError('Error fetching enrollments');
