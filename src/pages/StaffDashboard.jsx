@@ -29,7 +29,7 @@ const StaffDashboard = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/events');
+        const response = await axios.get('https://event-backend-1uul.onrender.com');
         setEvents(response.data);
       } catch (error) {
         console.error('Error fetching events:', error);
@@ -46,7 +46,7 @@ const StaffDashboard = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/events', newEvent);
+      const response = await axios.post('https://event-backend-1uul.onrender.com', newEvent);
       setEvents((prevEvents) => [...prevEvents, response.data]);
       setNewEvent({ name: '', date: '', description: '' });
     } catch (error) {
