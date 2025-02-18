@@ -12,7 +12,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const res = await axios.post('https://event-backend-1uul.onrender.com', { email, password });
       localStorage.setItem('token', res.data.token);
       const userRole = res.data.role;
 
@@ -31,7 +31,7 @@ const Login = () => {
 
   const handleForgotPassword = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/forgot-password', { email: forgotPasswordEmail });
+      const res = await axios.post('https://event-backend-1uul.onrender.com', { email: forgotPasswordEmail });
       setResetMessage(res.data.message || 'Check your email for the reset link!');
       setForgotPasswordEmail('');
     } catch (error) {
