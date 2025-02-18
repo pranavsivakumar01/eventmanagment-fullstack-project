@@ -12,7 +12,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://event-backend-1uul.onrender.com', { firstName, lastName, email, password, role });
+      await axios.post('https://event-backend-1uul.onrender.com/api/auth/register', { firstName, lastName, email, password, role });
       alert('User registered successfully');
       window.location.href = '/login';
     } catch (error) {
