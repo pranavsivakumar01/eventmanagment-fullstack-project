@@ -12,7 +12,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://event-backend-1uul.onrender.com/api/auth/login', { email, password });
+      const res = await axios.post('https://event-backend-1uul.onrender.com', { email, password });
       localStorage.setItem('token', res.data.token);
       const userRole = res.data.role;
 
@@ -94,7 +94,7 @@ const Login = () => {
         </form>
 
         <div className="text-center mt-6">
-          <p className="text-gray-400">Don't have an account? <a ="/register" className="text-blue-400 hover:underline">Sign Up</a></p>
+          <p className="text-gray-400">Don't have an account? <a href="/register" className="text-blue-400 hover:underline">Sign Up</a></p>
         </div>
       </div>
 
